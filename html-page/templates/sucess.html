@@ -1,0 +1,28 @@
+<html>
+<header>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/util.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+</header>
+
+<body>
+    <div class="container-login100">
+        <table border="2px">
+            <tr align="center">
+
+
+                <h2><b>Total {{data|length}} attachment received!!</b></h2>
+
+            </tr>
+            {% for index in range(data|length) %}
+            <tr>
+                <td>{{ index }}</td>
+                <th> {{ data[index] }} </th>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
